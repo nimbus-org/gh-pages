@@ -65,7 +65,7 @@
         <github.global.server>github</github.global.server>
     </properties>
 
-<!--
+<!-- for Maven central repository deploy 
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -78,10 +78,10 @@
     </distributionManagement>
 -->
 
+<!-- for Github repository deploy -->
     <distributionManagement>
         <repository>
             <id>internal.repos</id>
-            <name>Temporary Staging Repository</name>
             <url>file://${project.build.directory}/mvn-repo</url>
         </repository>
     </distributionManagement>
@@ -665,19 +665,6 @@
                     </excludes>
                 </configuration>
             </plugin>
-<!--
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
--->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -705,6 +692,20 @@
                     </execution>
                 </executions>
             </plugin>
+<!-- for Maven central repository deploy
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+-->
+<!-- for Github repository deploy -->
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.1</version>
@@ -717,7 +718,6 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.12</version>
                 <configuration>
-                    <!-- git commit message -->
                     <message>Maven artifacts for ${project.version}</message>
                     <noJekyll>true</noJekyll>
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
@@ -727,7 +727,6 @@
                     </includes>
                     <repositoryName>gh-pages</repositoryName>
                     <repositoryOwner>nimbus-org</repositoryOwner>
-                    <!-- true：履歴を残す　false：直近バージョンのみ repositoryに残る -->
                     <merge>true</merge>
                 </configuration>
                 <executions>
@@ -739,6 +738,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
     <repositories>
