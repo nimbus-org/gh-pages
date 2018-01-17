@@ -85,12 +85,12 @@
         <repository>
             <id>release-nimbus.github.io</id>
             <name>Nimbus Maven Release Repository</name>
-            <url>https://nimbus-org.github.io/gh-pages/mvn-repo/releases</url>
+            <url>https://nimbus-org.github.io/gh-pages/mvn</url>
         </repository>
         <snapshotRepository>
             <id>snapshot-nimbus.github.io</id>
             <name>Nimbus Maven Snapshot Repository</name>
-            <url>https://nimbus-org.github.io/gh-pages/mvn-repo/snapshots</url>
+            <url>https://nimbus-org.github.io/gh-pages/mvn</url>
         </snapshotRepository>
         <site>
             <id>nimbus.github.io</id>
@@ -734,7 +734,7 @@
                 <version>2.8.1</version>
                 <configuration>
                     <altReleaseDeploymentRepository>internal.repos::default::file:///${project.reporting.outputDirectory}/mvn</altReleaseDeploymentRepository>
-                    <altSnapshotDeploymentRepository>internal.repos::default::file:///${project.reporting.outputDirectory}/snapshots</altSnapshotDeploymentRepository>
+                    <altSnapshotDeploymentRepository>internal.repos::default::file:///${project.reporting.outputDirectory}/mvn</altSnapshotDeploymentRepository>
                 </configuration>
             </plugin>
             <plugin>
