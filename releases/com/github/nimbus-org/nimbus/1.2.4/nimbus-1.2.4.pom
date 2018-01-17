@@ -99,15 +99,6 @@
         </site>
     </distributionManagement>
 
-<!--
-    <distributionManagement>
-        <repository>
-            <id>internal.repos</id>
-            <url>file://${project.build.directory}/mvn-repo</url>
-        </repository>
-    </distributionManagement>
--->
-
     <dependencies>
         <dependency>
             <groupId>ant</groupId>
@@ -746,7 +737,6 @@
                     <altSnapshotDeploymentRepository>internal.repos::default::file:///${project.reporting.outputDirectory}/snapshots</altSnapshotDeploymentRepository>
                 </configuration>
             </plugin>
-            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
@@ -763,7 +753,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-            
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
