@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>commentout-by-javaversion-maven-plugin</name>
+      <prefix>commentout-by-javaversion</prefix>
+      <artifactId>commentout-by-javaversion-maven-plugin</artifactId>
+    </plugin>
+  </plugins>
+</metadata>
