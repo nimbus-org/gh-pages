@@ -5,42 +5,42 @@
   <version>SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20180913.023207</timestamp>
-      <buildNumber>2</buildNumber>
+      <timestamp>20180921.100118</timestamp>
+      <buildNumber>3</buildNumber>
     </snapshot>
-    <lastUpdated>20180913023207</lastUpdated>
+    <lastUpdated>20180921100118</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>20180913.023207-2</value>
-        <updated>20180913023207</updated>
+        <value>20180921.100118-3</value>
+        <updated>20180921100118</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>20180913.023207-2</value>
-        <updated>20180913023207</updated>
+        <value>20180921.100118-3</value>
+        <updated>20180921100118</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>20180913.023207-2</value>
-        <updated>20180913023207</updated>
+        <value>20180921.100118-3</value>
+        <updated>20180921100118</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar.asc</extension>
-        <value>20180913.023207-2</value>
-        <updated>20180913023207</updated>
+        <value>20180921.100118-3</value>
+        <updated>20180921100118</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom.asc</extension>
-        <value>20180913.023207-2</value>
-        <updated>20180913023207</updated>
+        <value>20180921.100118-3</value>
+        <updated>20180921100118</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar.asc</extension>
-        <value>20180913.023207-2</value>
-        <updated>20180913023207</updated>
+        <value>20180921.100118-3</value>
+        <updated>20180921100118</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
