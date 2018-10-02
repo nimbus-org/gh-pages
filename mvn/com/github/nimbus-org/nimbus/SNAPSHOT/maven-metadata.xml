@@ -5,42 +5,42 @@
   <version>SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20180921.110832</timestamp>
+      <timestamp>20181002.103633</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20180921110832</lastUpdated>
+    <lastUpdated>20181002103633</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>20180921.110832-1</value>
-        <updated>20180921110832</updated>
+        <value>20181002.103633-1</value>
+        <updated>20181002103633</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>20180921.110832-1</value>
-        <updated>20180921110832</updated>
+        <value>20181002.103633-1</value>
+        <updated>20181002103633</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>20180921.110832-1</value>
-        <updated>20180921110832</updated>
+        <value>20181002.103633-1</value>
+        <updated>20181002103633</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar.asc</extension>
-        <value>20180921.110832-1</value>
-        <updated>20180921110832</updated>
+        <value>20181002.103633-1</value>
+        <updated>20181002103633</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom.asc</extension>
-        <value>20180921.110832-1</value>
-        <updated>20180921110832</updated>
+        <value>20181002.103633-1</value>
+        <updated>20181002103633</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar.asc</extension>
-        <value>20180921.110832-1</value>
-        <updated>20180921110832</updated>
+        <value>20181002.103633-1</value>
+        <updated>20181002103633</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
