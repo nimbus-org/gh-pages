@@ -2,9 +2,9 @@
 <metadata>
   <plugins>
     <plugin>
-      <name>commentout-by-javaversion-maven-plugin</name>
-      <prefix>commentout-by-javaversion</prefix>
-      <artifactId>commentout-by-javaversion-maven-plugin</artifactId>
+      <name>nimbus-javaversion-filecontrol-maven-plugin</name>
+      <prefix>nimbus-javaversion-filecontrol</prefix>
+      <artifactId>nimbus-javaversion-filecontrol-maven-plugin</artifactId>
     </plugin>
   </plugins>
 </metadata>
