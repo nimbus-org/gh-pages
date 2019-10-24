@@ -1,0 +1,184 @@
+<!--
+This is the XML DTD for the Nimbus 1.0 DataSet generation descriptor.
+The DOCTYPE is:
+  <!DOCTYPE dataSets PUBLIC
+      "-//Nimbus//DTD Nimbus DataSet generation 1.0//JA"
+      "http://nimbus.sourceforge.jp/dtd/dataset_1_0.dtd">
+
+\u4f8b:
+    <dataSets>
+        
+        <property name="PACKAGE">jp.co.nri.beans</property>
+        
+        <record code="${PACKAGE}.SampleRecord"
+                extends="jp.ossc.nimbus.service.context.SharedContextRecord">
+            <schema>
+                :a,java.lang.String
+                :b,int
+            </schema>
+        </record>
+        
+        <header code="${PACKAGE}.SampleHeader"
+                name="SampleHeader">
+            <schema>
+                :a,java.lang.String
+                :b,int
+            </schema>
+        </header>
+        
+        <recordList code="${PACKAGE}.SampleRecordList"
+                    recordCode="${PACKAGE}.SampleRecord"
+                    name="SampleRecordList"/>
+        
+        <dataSet code="${PACKAGE}.SampleDataSet"
+                 name="SampleDataSet">
+            <header name="SampleHeader" code="${PACKAGE}.SampleHeader"/>
+            <recordList name="SampleRecordList" code="${PACKAGE}.SampleRecordList"/>
+        </dataSet>
+        
+    </dataSets>
+-->
+
+<!-- dataSets\u8981\u7d20\u306f\u3001\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u751f\u6210\u5b9a\u7fa9\u306e\u30eb\u30fc\u30c8\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT dataSets (property* | record* | header* | recordList* | dataSet*)*>
+
+<!-- property\u8981\u7d20\u306f\u3001${\u30d7\u30ed\u30d1\u30c6\u30a3\u540d}\u3067\u53c2\u7167\u3067\u304d\u308b\u74b0\u5883\u5909\u6570\u30d7\u30ed\u30d1\u30c6\u30a3\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ELEMENT property (#PCDATA)>
+
+<!-- name\u5c5e\u6027\u306f\u3001${\u30d7\u30ed\u30d1\u30c6\u30a3\u540d}\u3067\u53c2\u7167\u3067\u304d\u308b\u74b0\u5883\u5909\u6570\u30d7\u30ed\u30d1\u30c6\u30a3\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST property name CDATA #REQUIRED>
+
+<!-- record\u8981\u7d20\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT record (schema)>
+
+<!-- code\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST record code CDATA #REQUIRED>
+
+<!-- extends\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u306e\u89aa\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST record extends CDATA #IMPLIED>
+
+<!-- abstract\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u3092\u62bd\u8c61\u30af\u30e9\u30b9\u306b\u3059\u308b\u304b\u3069\u3046\u304b\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST record abstract (true|false) "false">
+
+<!-- header\u8981\u7d20\u306f\u3001\u30d8\u30c3\u30c0\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT header (schema?)>
+
+<!-- code\u5c5e\u6027\u306f\u3001\u30d8\u30c3\u30c0\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST header code CDATA #REQUIRED>
+
+<!-- extends\u5c5e\u6027\u306f\u3001\u30d8\u30c3\u30c0\u306e\u89aa\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST header extends CDATA #IMPLIED>
+
+<!-- abstract\u5c5e\u6027\u306f\u3001\u30d8\u30c3\u30c0\u3092\u62bd\u8c61\u30af\u30e9\u30b9\u306b\u3059\u308b\u304b\u3069\u3046\u304b\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST header abstract (true|false) "false">
+
+<!-- name\u5c5e\u6027\u306f\u3001\u30d8\u30c3\u30c0\u306e\u540d\u524d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST header name CDATA #IMPLIED>
+
+<!-- recordList\u8981\u7d20\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT recordList (index*)>
+
+<!-- code\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST recordList code CDATA #REQUIRED>
+
+<!-- extends\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u306e\u89aa\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST recordList extends CDATA #IMPLIED>
+
+<!-- abstract\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u3092\u62bd\u8c61\u30af\u30e9\u30b9\u306b\u3059\u308b\u304b\u3069\u3046\u304b\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST recordList abstract (true|false) "false">
+
+<!-- recordCode\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST recordList recordCode CDATA #IMPLIED>
+
+<!-- name\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u306e\u540d\u524d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST recordList name CDATA #IMPLIED>
+
+<!-- synchronized\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u306e\u540c\u671f\u5316\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST recordList synchronized (true|false) "true">
+
+<!-- index\u8981\u7d20\u306f\u3001\u691c\u7d22\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT index (#PCDATA)>
+
+<!-- name\u5c5e\u6027\u306f\u3001\u691c\u7d22\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u306e\u540d\u524d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST index name CDATA #REQUIRED>
+
+<!-- nestedRecord\u8981\u7d20\u306f\u3001\u30cd\u30b9\u30c8\u3057\u305f\u30ec\u30b3\u30fc\u30c9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT nestedRecord EMPTY>
+
+<!-- code\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST nestedRecord code CDATA #REQUIRED>
+
+<!-- name\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u306e\u540d\u524d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST nestedRecord name CDATA #REQUIRED>
+
+<!-- nestedRecordList\u8981\u7d20\u306f\u3001\u30cd\u30b9\u30c8\u3057\u305f\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT nestedRecordList EMPTY>
+
+<!-- code\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST nestedRecordList code CDATA #REQUIRED>
+
+<!-- name\u5c5e\u6027\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u306e\u540d\u524d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST nestedRecordList name CDATA #REQUIRED>
+
+<!-- dataSet\u8981\u7d20\u306f\u3001\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT dataSet (header* | recordList* | nestedRecord* |nestedRecordList*)*>
+
+<!-- code\u5c5e\u6027\u306f\u3001\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST dataSet code CDATA #REQUIRED>
+
+<!-- extends\u5c5e\u6027\u306f\u3001\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u306e\u89aa\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST dataSet extends CDATA #IMPLIED>
+
+<!-- abstract\u5c5e\u6027\u306f\u3001\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u3092\u62bd\u8c61\u30af\u30e9\u30b9\u306b\u3059\u308b\u304b\u3069\u3046\u304b\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST dataSet abstract (true|false) "false">
+
+<!-- name\u5c5e\u6027\u306f\u3001\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u306e\u540d\u524d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST dataSet name CDATA #IMPLIED>
+
+<!-- synchronized\u5c5e\u6027\u306f\u3001\u30c7\u30fc\u30bf\u30bb\u30c3\u30c8\u306e\u540c\u671f\u5316\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST dataSet synchronized (true|false) "true">
+
+<!-- schema\u8981\u7d20\u306f\u3001\u30ec\u30b3\u30fc\u30c9\u3084\u30ec\u30b3\u30fc\u30c9\u30ea\u30b9\u30c8\u306e\u30b9\u30ad\u30fc\u30de\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ELEMENT schema (#PCDATA)>
+
+<!-- type\u5c5e\u6027\u306f\u3001\u30b9\u30ad\u30fc\u30de\u306e\u5b9a\u7fa9\u65b9\u6cd5\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+     \u5358\u7d14\u306b\u6307\u5b9a\u3057\u305f\u30b9\u30ad\u30fc\u30de\u306b\u3057\u305f\u3044\u5834\u5408\u306f\u3001set
+     \u89aa\u30af\u30e9\u30b9\u306e\u30b9\u30ad\u30fc\u30de\u306b\u4ed8\u52a0\u3057\u305f\u3044\u5834\u5408\u306f\u3001append
+     \u89aa\u30af\u30e9\u30b9\u306e\u30b9\u30ad\u30fc\u30de\u3092\u7f6e\u63db\u3057\u305f\u3044\u5834\u5408\u306f\u3001replace
+     \u30c7\u30d5\u30a9\u30eb\u30c8\u306f\u3001set
+-->
+<!ATTLIST schema type (set|append|replace) "set">
