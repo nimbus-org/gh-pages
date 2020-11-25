@@ -5,42 +5,42 @@
   <version>1.2.5-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20201116.123216</timestamp>
+      <timestamp>20201125.030751</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20201116123216</lastUpdated>
+    <lastUpdated>20201125030751</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.2.5-20201116.123216-1</value>
-        <updated>20201116123216</updated>
+        <value>1.2.5-20201125.030751-1</value>
+        <updated>20201125030751</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.2.5-20201116.123216-1</value>
-        <updated>20201116123216</updated>
+        <value>1.2.5-20201125.030751-1</value>
+        <updated>20201125030751</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.2.5-20201116.123216-1</value>
-        <updated>20201116123216</updated>
+        <value>1.2.5-20201125.030751-1</value>
+        <updated>20201125030751</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar.asc</extension>
-        <value>1.2.5-20201116.123216-1</value>
-        <updated>20201116123216</updated>
+        <value>1.2.5-20201125.030751-1</value>
+        <updated>20201125030751</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom.asc</extension>
-        <value>1.2.5-20201116.123216-1</value>
-        <updated>20201116123216</updated>
+        <value>1.2.5-20201125.030751-1</value>
+        <updated>20201125030751</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar.asc</extension>
-        <value>1.2.5-20201116.123216-1</value>
-        <updated>20201116123216</updated>
+        <value>1.2.5-20201125.030751-1</value>
+        <updated>20201125030751</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
