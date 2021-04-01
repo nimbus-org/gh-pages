@@ -1,0 +1,132 @@
+<!--
+This is the XML DTD for the Nimbus 1.0 DataSet generation descriptor.
+The DOCTYPE is:
+  <!DOCTYPE restserver PUBLIC
+      "-//Nimbus//DTD Nimbus RestServer definition 1.0//JA"
+      "http://nimbus.sourceforge.jp/dtd/restserver_1_0.dtd">
+
+\u4f8b:
+    <restserver>
+        
+        <resource name="/users">
+            <post>
+                <request code="sample.dto.User"/>
+                <response code="sample.dto.Response"/>
+            </post>
+            <get>
+                <request code="sample.dto.UserFilter"/>
+                <response code="sample.dto.UserList"/>
+            </get>
+            <head>
+                <request code="sample.dto.UserFilter"/>
+            </head>
+            <options/>
+        </resource>
+        
+        <resource name="/users/{id}">
+            <get>
+                <request code="java.lang.String"/>
+                <response code="sample.dto.User"/>
+            </get>
+            <head>
+                <request code="java.lang.String"/>
+            </head>
+            <put>
+                <request code="sample.dto.User"/>
+                <response code="sample.dto.Response"/>
+            </put>
+            <delete>
+                <request code="java.lang.String"/>
+                <response code="sample.dto.Response"/>
+            </delete>
+            <options/>
+        </resource>
+        
+        <resource name="/users/{id}/friends">
+            <get>
+                <request code="sample.dto.UserFilter"/>
+                <response code="sample.dto.UserList"/>
+            </get>
+            <head>
+                <request code="sample.dto.UserFilter"/>
+            </head>
+            <options/>
+        </resource>
+        
+        <resource name="/users/{id}/friends/{friend_id}">
+            <post>
+                <request code="java.util.HashMap"/>
+                <response code="sample.dto.Response"/>
+            </post>
+            <get>
+                <request code="java.util.HashMap"/>
+                <response code="sample.dto.User"/>
+            </get>
+            <head>
+                <request code="java.util.HashMap"/>
+            </head>
+            <delete>
+                <request code="java.util.HashMap"/>
+                <response code="sample.dto.Response"/>
+            </delete>
+            <options/>
+        </resource>
+        
+    </restserver>
+-->
+
+<!-- restserver\u8981\u7d20\u306f\u3001REST\u30b5\u30fc\u30d0\u5b9a\u7fa9\u306e\u30eb\u30fc\u30c8\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT restserver (resource+)>
+
+<!-- resource\u8981\u7d20\u306f\u3001REST\u30b5\u30fc\u30d0\u306b\u5b58\u5728\u3059\u308b\u30ea\u30bd\u30fc\u30b9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT resource (post? | get? | head? | put? | delete? | options?)*>
+
+<!-- name\u5c5e\u6027\u306f\u3001REST\u30b5\u30fc\u30d0\u306e\u30ea\u30bd\u30fc\u30b9\u3092\u793a\u3059URI\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST resource name CDATA #REQUIRED>
+
+<!-- post\u8981\u7d20\u306f\u3001\u30ea\u30bd\u30fc\u30b9\u306ePOST\u30e1\u30bd\u30c3\u30c9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT post (description? | request? | response?)*>
+
+<!-- get\u8981\u7d20\u306f\u3001\u30ea\u30bd\u30fc\u30b9\u306eGET\u30e1\u30bd\u30c3\u30c9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT get (description? | request? | response)*>
+
+<!-- head\u8981\u7d20\u306f\u3001\u30ea\u30bd\u30fc\u30b9\u306eHEAD\u30e1\u30bd\u30c3\u30c9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT head (description? | request?)>
+
+<!-- put\u8981\u7d20\u306f\u3001\u30ea\u30bd\u30fc\u30b9\u306ePUT\u30e1\u30bd\u30c3\u30c9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT put (description? | request? | response?)*>
+
+<!-- delete\u8981\u7d20\u306f\u3001\u30ea\u30bd\u30fc\u30b9\u306eDELETE\u30e1\u30bd\u30c3\u30c9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT delete (description? | request? | response?)*>
+
+<!-- options\u8981\u7d20\u306f\u3001\u30ea\u30bd\u30fc\u30b9\u306eDELETE\u30e1\u30bd\u30c3\u30c9\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT options EMPTY>
+
+<!-- description\u8981\u7d20\u306f\u3001\u30e1\u30bd\u30c3\u30c9\u306e\u8aac\u660e\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ELEMENT description (#PCDATA)>
+
+<!-- request\u8981\u7d20\u306f\u3001\u30e1\u30bd\u30c3\u30c9\u306e\u30ea\u30af\u30a8\u30b9\u30c8\u60c5\u5831\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT request EMPTY>
+
+<!-- code\u5c5e\u6027\u306f\u3001\u30ea\u30af\u30a8\u30b9\u30c8\u60c5\u5831\u3092\u683c\u7d0d\u3059\u308bBean\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST request code CDATA #REQUIRED>
+
+<!-- response\u8981\u7d20\u306f\u3001\u30e1\u30bd\u30c3\u30c9\u306e\u30ec\u30b9\u30dd\u30f3\u30b9\u60c5\u5831\u3092\u5b9a\u7fa9\u3059\u308b\u8981\u7d20\u3067\u3059\u3002
+-->
+<!ELEMENT response EMPTY>
+
+<!-- code\u5c5e\u6027\u306f\u3001\u30ec\u30b9\u30dd\u30f3\u30b9\u60c5\u5831\u3092\u683c\u7d0d\u3059\u308bBean\u306e\u30af\u30e9\u30b9\u540d\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002
+-->
+<!ATTLIST response code CDATA #REQUIRED>
