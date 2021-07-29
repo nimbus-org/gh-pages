@@ -5,42 +5,42 @@
   <version>1.2.5-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20210729.060729</timestamp>
-      <buildNumber>1</buildNumber>
+      <timestamp>20210729.071509</timestamp>
+      <buildNumber>2</buildNumber>
     </snapshot>
-    <lastUpdated>20210729060729</lastUpdated>
+    <lastUpdated>20210729071509</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.2.5-20210729.060729-1</value>
-        <updated>20210729060729</updated>
+        <value>1.2.5-20210729.071509-2</value>
+        <updated>20210729071509</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.2.5-20210729.060729-1</value>
-        <updated>20210729060729</updated>
+        <value>1.2.5-20210729.071509-2</value>
+        <updated>20210729071509</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.2.5-20210729.060729-1</value>
-        <updated>20210729060729</updated>
+        <value>1.2.5-20210729.071509-2</value>
+        <updated>20210729071509</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar.asc</extension>
-        <value>1.2.5-20210729.060729-1</value>
-        <updated>20210729060729</updated>
+        <value>1.2.5-20210729.071509-2</value>
+        <updated>20210729071509</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom.asc</extension>
-        <value>1.2.5-20210729.060729-1</value>
-        <updated>20210729060729</updated>
+        <value>1.2.5-20210729.071509-2</value>
+        <updated>20210729071509</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar.asc</extension>
-        <value>1.2.5-20210729.060729-1</value>
-        <updated>20210729060729</updated>
+        <value>1.2.5-20210729.071509-2</value>
+        <updated>20210729071509</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
