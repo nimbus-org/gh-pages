@@ -3,8 +3,8 @@
   <plugins>
     <plugin>
       <name>nimbus-javaversion-filecontrol-maven-plugin</name>
-      <prefix>nimbus-javaversion-filecontrol</prefix>
-      <artifactId>nimbus-javaversion-filecontrol-maven-plugin</artifactId>
+      <prefix>nimbus-version-filecontrol</prefix>
+      <artifactId>nimbus-version-filecontrol-maven-plugin</artifactId>
     </plugin>
   </plugins>
 </metadata>
