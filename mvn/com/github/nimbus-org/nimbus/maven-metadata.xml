@@ -3,10 +3,9 @@
   <groupId>com.github.nimbus-org</groupId>
   <artifactId>nimbus</artifactId>
   <versioning>
-    <release>1.2.5</release>
     <versions>
-      <version>1.2.5</version>
+      <version>1.2.6-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20230814075831</lastUpdated>
+    <lastUpdated>20230814081839</lastUpdated>
   </versioning>
 </metadata>
